@@ -54,37 +54,37 @@ function Projects() {
         <Card
           title="MY_PORTFOLIO"
           image={pg}
-          github="https://github.com/PRIYDARSHANGLBITM/priydarshan-portfolio"
-          demo="https://portfolio1-mu-puce.vercel.app/"
+          github="https://github.com/PRIYDARSHANGLBITM/MY_PORTFOLIO"
+          demo="my-portfolio-five-chi-32.vercel.app"
         />
 
         <Card
           title="GAVAI-SWAD"
           image={pd}
-          github="#"
-          demo="#"
+          github="https://github.com/PRIYDARSHANGLBITM/GAVAI-SWAD-ONLINE-PICKLE-STORE-E_COMMERCE"
+          demo="gavaiswad.vercel.app"
         />
 
         <Card
           title="CAR RENTAL SYSTEM"
           image={pc}
-          github="#"
-          demo="#"
+          github="https://github.com/PRIYDARSHANGLBITM/MY_PORTFOLIO"
+          demo="my-portfolio-five-chi-32.vercel.app"
         />
 
 
         <Card
           title="LIBRARY MANAGEMENT SYSTEM"
           image={pe}
-          github="#"
-          demo="#"
+          github="https://github.com/PRIYDARSHANGLBITM/MY_PORTFOLIO"
+          demo="my-portfolio-five-chi-32.vercel.app"
         />
 
         <Card
           title="BOX OFFICE"
           image={pf}
-          github="#"
-          demo="#"
+          github="https://github.com/PRIYDARSHANGLBITM/MY_PORTFOLIO"
+          demo="my-portfolio-five-chi-32.vercel.app"
         />
 
         <Card
