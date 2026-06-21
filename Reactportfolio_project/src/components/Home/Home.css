@@ -3,6 +3,7 @@
     height: 100%;
     display: flex;
     overflow: hidden;
+    position: relative;
 }
 
 .lefthome {
@@ -15,7 +16,7 @@
 }
 
 .righthome {
-    width: 50%;
+    width: 45%;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -25,9 +26,15 @@
 .righthome img {
     width: 50%;
     height: auto;
-    filter: drop-shadow(2px 2px 20px rgb(127, 191, 195));
-    border: 1px solid rgb(182, 128, 128);
     border-radius: 50%;
+    border: 2px solid rgb(66, 180, 205);
+    filter: drop-shadow(0 0 25px rgb(66, 180, 205));
+    transition: all 0.4s ease;
+}
+
+.righthome img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 35px rgb(66, 180, 205));
 }
 
 .homedetails {
@@ -40,58 +47,224 @@
 
 .line1 {
     font-size: 0.8em;
+    letter-spacing: 2px;
 }
 
 .line2 {
     font-size: 2.5em;
-    background: linear-gradient(to right, rgb(66,180,205), white);
+    background: linear-gradient(to right, rgb(66, 180, 205), white);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    text-align: center;
 }
 
 .line3 {
     font-size: 1em;
+    text-align: center;
 }
 
 .homedetails a {
     text-decoration: none;
 }
 
-.homedetails button {
-    padding: 10px 30px;
-    background-color: rgb(66, 92, 92);
-    color: black;
-    border: 2px solid rgb(74, 93, 93);
-    margin-top: 30px;
-    border-radius: 20px;
-    font-size: 20px;
-    transition: all 0.2s;
-    cursor: pointer;
+/* Buttons */
+
+.buttonGroup {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-.homedetails button:hover {
-    background-color: transparent;
-    color: aquamarine;
+.homedetails button {
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
+
+/* Resume Button */
+
+.resumeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background: transparent;
+    color: rgb(66, 180, 205);
+    border: 2px solid rgb(66, 180, 205);
+}
+
+.resumeBtn:hover {
+    background: rgb(66, 180, 205);
+    color: black;
+    box-shadow: 0 0 15px rgb(66, 180, 205);
+    transform: translateY(-3px);
+}
+
+.resumeBtn svg {
+    font-size: 16px;
+    animation: downloadMove 1.5s infinite;
+}
+
+@keyframes downloadMove {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(4px);
+    }
+}
+
+/* Hire Me Button */
+
+.contactBtn {
+    background: transparent;
+    color: rgb(66, 180, 205);
+    border: 2px solid rgb(66, 180, 205);
+}
+
+.contactBtn:hover {
+    background: rgb(66, 180, 205);
+    color: black;
+    box-shadow: 0 0 15px rgb(66, 180, 205);
+    transform: translateY(-3px);
+}
+
+/* Social Icons */
+
+.socialIcons {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.socialIcons a {
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgb(66, 180, 205);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(66, 180, 205);
+    font-size: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.socialIcons a:hover {
+    background-color: rgb(66, 180, 205);
+    color: black;
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgb(66, 180, 205);
+}
+
+/* Mobile Responsive */
 
 @media (max-width: 750px) {
     #Home {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
     }
 
     .lefthome {
         width: 100%;
-        height: 50vh;
+        height: auto;
+        padding: 20px;
     }
 
     .righthome {
         width: 100%;
-        height: 50vh;
-        align-items: end;
+        height: auto;
+        margin-top: 80px;
     }
 
     .righthome img {
-        width: 40%;
+        width: 55%;
+
+    }
+
+    .buttonGroup {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .socialIcons a {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .line2 {
+        font-size: 2em;
+    }
+
+    .line3 {
+        font-size: 0.9em;
+    }
+}
+
+
+
+.scrollDown {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(66, 180, 205);
+    animation: bounce 2s infinite;
+}
+
+.mouse {
+    width: 28px;
+    height: 45px;
+    border: 2px solid rgb(66, 180, 205);
+    border-radius: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.wheel {
+    width: 4px;
+    height: 8px;
+    background: rgb(66, 180, 205);
+    border-radius: 5px;
+    margin-top: 8px;
+    animation: scrollWheel 1.5s infinite;
+}
+
+@keyframes scrollWheel {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-8px);
     }
 }

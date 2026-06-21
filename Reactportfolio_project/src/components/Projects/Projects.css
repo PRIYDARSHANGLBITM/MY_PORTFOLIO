@@ -1,28 +1,33 @@
-#Projects{
+#Projects {
     width: 100%;
     min-height: 100vh;
+    padding: 80px 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    gap: 30px;
+    align-items: center;
+    gap: 50px;
     overflow: hidden;
 }
-.slider{
-    width: 90%;
-    height: 300px;
+
+#para {
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #ff4040, #ffffff);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+.slider {
+    width: 95%;
     display: flex;
-    align-items:center;
-    overflow-x: scroll ;
-    overflow-y: hidden;
-    gap: 30px;
+    gap: 25px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
     scrollbar-width: none;
     padding: 20px;
 }
-#para{
-    font-size: 4vmax;
-    background: linear-gradient(to right,rgb(234, 37, 37),white);
-    background-clip: text;
-    color: transparent;
-    text-align: center;
+
+.slider::-webkit-scrollbar {
+    display: none;
 }
