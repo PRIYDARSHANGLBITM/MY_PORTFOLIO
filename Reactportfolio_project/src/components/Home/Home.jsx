@@ -21,17 +21,17 @@ function Home() {
     <div id="Home">
       <div className="lefthome">
         <div className="homedetails">
-          <div className="line1">👋 Hello, I'M</div>
+          <div className="line1">👋 Hello , I'M</div>
           <div className="line2">PRIY DARSHAN</div>
           <div className="line3">
             <span>
               <Typewriter
                 words={[
                   'Java Full Stack Developer',
-                  'React Developer',
+                  'React Developer' ,
                   'Spring Boot Learner',
-                  'DSA Enthusiast',
-                  'Problem Solver'
+                  'DSA Enthusiast' ,
+                  'Problem Solver '
                 ]}
                 loop={0}
                 cursor
@@ -51,7 +51,7 @@ function Home() {
             >
               <button className="resumeBtn">
                 <FaDownload />
-                <span>RESUME</span>
+                <span> RESUME </span>
               </button>
             </a>
 
