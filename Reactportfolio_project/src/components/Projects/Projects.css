@@ -21,11 +21,12 @@
 .slider {
     width: 95%;
     display: flex;
-    gap: 25px;
+    gap: 30px;
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
     padding: 20px;
+    align-items: stretch;
 }
 
 .slider::-webkit-scrollbar {
